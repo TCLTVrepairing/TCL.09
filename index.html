@@ -1,193 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expert TV Solutions</title>
-  <meta name="description" content="India's trusted LED, LCD & Smart TV Repair Service. Call, WhatsApp, Book Appointment & Home Service Available." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UrbanStyle TV Repair Service</title>
+<meta name="description" content="Professional LED, LCD & Smart TV Repair Service at Home. Trusted Technicians, Transparent Pricing, Fast Support.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f7f9fc;color:#111}
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#f4f6fb;color:#222;line-height:1.6}
+/* HEADER */
+header{background:#0b1c2d;color:#fff;padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:22px;font-weight:700}
+header .cta{font-size:14px}
 
-    header{
-      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      color:#fff;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap
-    }
-    header h1{font-size:26px;font-weight:600}
-    header span{font-size:14px;opacity:.9}
+/* HERO */
+.hero{background:linear-gradient(120deg,#0b1c2d,#102a43);color:#fff;padding:90px 8%;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.hero h2{font-size:44px;line-height:1.2;margin-bottom:20px}
+.hero p{opacity:.9;margin-bottom:30px;font-size:16px}
+.hero ul{list-style:none;margin-bottom:30px}
+.hero ul li{margin-bottom:10px;font-size:15px}
 
-    .hero{
-      padding:70px 8%;background:#fff;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center
-    }
-    .hero h2{font-size:40px;margin-bottom:15px}
-    .hero p{color:#555;margin-bottom:25px}
+.hero .buttons a{display:inline-block;padding:14px 28px;border-radius:10px;text-decoration:none;color:#fff;font-size:14px;font-weight:600;margin-right:12px}
+.btn-primary{background:#ffb703;color:#000}
+.btn-secondary{background:#25d366}
 
-    .btns a{
-      display:inline-block;padding:13px 26px;margin-right:10px;border-radius:8px;
-      text-decoration:none;color:#fff;font-size:14px;font-weight:500
-    }
-    .call{background:#1e90ff}
-    .whatsapp{background:#25d366}
+.hero img{width:100%;border-radius:20px;box-shadow:0 25px 60px rgba(0,0,0,.35)}
 
-    .hero img{width:100%;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.18)}
+/* SECTION */
+section{padding:80px 8%}
+.section-title{text-align:center;margin-bottom:55px}
+.section-title h3{font-size:34px;margin-bottom:10px}
+.section-title p{color:#555;font-size:15px}
 
-    section{padding:70px 8%}
-    .title{text-align:center;margin-bottom:45px}
-    .title h2{font-size:32px}
-    .title p{color:#666;font-size:14px}
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+.service-card{background:#fff;padding:35px;border-radius:22px;box-shadow:0 15px 35px rgba(0,0,0,.08)}
+.service-card h4{font-size:18px;margin-bottom:10px}
+.service-card p{font-size:14px;color:#666}
 
-    .services,.reviews,.gallery{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px
-    }
+/* TRUST */
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;text-align:center}
+.trust div{background:#fff;padding:35px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.trust h2{font-size:38px;color:#0b1c2d}
 
-    .card{
-      background:#fff;padding:30px;border-radius:16px;text-align:center;
-      box-shadow:0 8px 25px rgba(0,0,0,.08);transition:.3s
-    }
-    .card:hover{transform:translateY(-6px)}
-    .card h3{margin-bottom:10px}
-    .card p{font-size:14px;color:#666}
+/* BOOKING */
+.booking{background:#fff;border-radius:28px;padding:55px;display:grid;grid-template-columns:1fr 1fr;gap:40px;box-shadow:0 20px 45px rgba(0,0,0,.12)}
+.booking input,.booking textarea{width:100%;padding:15px;border-radius:12px;border:1px solid #ddd;margin-bottom:16px;font-size:14px}
+.booking button{width:100%;padding:16px;border:none;border-radius:12px;background:#0b1c2d;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
 
-    .experience{
-      background:linear-gradient(135deg,#203a43,#2c5364);color:#fff;border-radius:20px;
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;padding:40px;text-align:center
-    }
-    .experience h3{font-size:36px}
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.gallery img{width:100%;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
 
-    .appointment{
-      background:#fff;border-radius:20px;padding:45px;
-      display:grid;grid-template-columns:1fr 1fr;gap:35px;
-      box-shadow:0 10px 30px rgba(0,0,0,.12)
-    }
+/* REVIEWS */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.review{background:#fff;padding:35px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.1)}
 
-    form input,form textarea{
-      width:100%;padding:14px;border-radius:8px;border:1px solid #ddd;margin-bottom:14px
-    }
-    form button{
-      padding:14px;border:none;border-radius:8px;background:#1e90ff;color:#fff;font-size:15px;cursor:pointer
-    }
+/* FOOTER */
+footer{background:#0b1c2d;color:#fff;padding:50px 8%;text-align:center;font-size:14px}
 
-    .gallery img{
-      width:100%;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.15)
-    }
+/* FLOATING */
+.float-whatsapp{position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;padding:15px 22px;border-radius:50px;text-decoration:none;font-weight:600;box-shadow:0 12px 30px rgba(0,0,0,.3)}
 
-    iframe{width:100%;border-radius:16px;border:none;height:320px}
-
-    footer{
-      background:#0f2027;color:#fff;padding:40px 8%;text-align:center;font-size:14px
-    }
-
-    .floating{
-      position:fixed;bottom:25px;right:25px;background:#25d366;color:#fff;
-      padding:14px 18px;border-radius:50px;text-decoration:none;font-size:14px;
-      box-shadow:0 8px 25px rgba(0,0,0,.3)
-    }
-
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .appointment{grid-template-columns:1fr}
-    }
-  </style>
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+.booking{grid-template-columns:1fr}
+.hero h2{font-size:36px}
+}
+</style>
 </head>
 <body>
 
 <header>
-  <h1>Ultra Pro TV Repair</h1>
-  <span>📞 +91-78350 81028 | 🕘 9AM – 9PM</span>
+<h1>Urban TV Repair</h1>
+<div class="cta">📞 +91-9318473819</div>
 </header>
 
 <div class="hero">
-  <div>
-    <h2>India’s Trusted Smart TV Repair Experts</h2>
-    <p>LED, LCD & Smart TV repairing with advanced machines, trained technicians & doorstep service.</p>
-    <div class="btns">
-      <a class="call" href="tel:+9178350 81028">Call Now</a>
-      <a class="whatsapp" href="https://wa.me/9178350 81028">WhatsApp</a>
-    </div>
-  </div>
-  <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9f27b4" alt="TV Repair">
+<div>
+<h2>Professional TV Repair Service at Your Home</h2>
+<p>Urban-style trusted TV repair service with verified technicians, genuine parts and quick doorstep support.</p>
+<ul>
+<li>✔ Same Day Repair</li>
+<li>✔ Genuine Spare Parts</li>
+<li>✔ Service Warranty</li>
+<li>✔ Transparent Pricing</li>
+</ul>
+<div class="buttons">
+<a href="tel:+919318473819" class="btn-primary">Book Repair</a>
+<a href="https://wa.me/919318473819" class="btn-secondary">WhatsApp</a>
+</div>
+</div>
+<img src="https://images.unsplash.com/photo-1581092334651-ddf26d9f27b4">
 </div>
 
 <section>
-  <div class="title"><h2>Our Services</h2><p>Complete TV repair solutions</p></div>
-  <div class="services">
-    <div class="card"><h3>LED / LCD Repair</h3><p>Screen, backlight, power issues</p></div>
-    <div class="card"><h3>Smart TV Repair</h3><p>Software, WiFi, motherboard</p></div>
-    <div class="card"><h3>Panel Repair</h3><p>High precision panel work</p></div>
-    <div class="card"><h3>Home Service</h3><p>Fast doorstep support</p></div>
-  </div>
+<div class="section-title"><h3>Our Services</h3><p>Complete TV repair solutions at home</p></div>
+<div class="services">
+<div class="service-card"><h4>LED / LCD TV Repair</h4><p>Screen, power, display & sound issues fixed by experts.</p></div>
+<div class="service-card"><h4>Smart TV Repair</h4><p>Software, WiFi, OS & motherboard problems solved.</p></div>
+<div class="service-card"><h4>Panel Repair</h4><p>Advanced panel level servicing with precision.</p></div>
+<div class="service-card"><h4>Home Service</h4><p>Fast doorstep support with minimal charges.</p></div>
+</div>
 </section>
 
 <section>
-  <div class="experience">
-    <div><h3>10+</h3><p>Years Experience</p></div>
-    <div><h3>5000+</h3><p>TV Repaired</p></div>
-    <div><h3>100%</h3><p>Customer Satisfaction</p></div>
-    <div><h3>24/7</h3><p>Support Available</p></div>
-  </div>
+<div class="trust">
+<div><h2>10+</h2><p>Years Experience</p></div>
+<div><h2>5000+</h2><p>TVs Repaired</p></div>
+<div><h2>4.9★</h2><p>Customer Rating</p></div>
+<div><h2>100%</h2><p>Satisfaction</p></div>
+</div>
 </section>
 
 <section>
-  <div class="appointment">
-    <div>
-      <h2>Book Appointment</h2>
-      <p>Submit your problem & our technician will call you.</p>
-    </div>
-    <form onsubmit="sendWhatsApp();return false;">
-      <input id="name" type="text" placeholder="Your Name" required>
-      <input id="phone" type="tel" placeholder="Mobile Number" required>
-      <textarea id="problem" placeholder="TV Problem"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+<div class="booking">
+<div>
+<h3>Book TV Repair Service</h3>
+<p>Share your issue & our technician will contact you shortly.</p>
+</div>
+<form onsubmit="sendWhatsApp();return false;">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Mobile Number" required>
+<textarea id="problem" placeholder="Describe TV Problem"></textarea>
+<button>Confirm Booking</button>
+</form>
+</div>
 </section>
 
 <section>
-  <div class="title"><h2>Our Professional Repair Gallery</h2><p>Real repair work & advanced machines</p></div>
-  <div class="gallery">
-    <!-- Replace image paths with your own images -->
-    <img src="images/repair1.jfif" alt="TV Repair Work">
-    <img src="images/repair2.jfif" alt="LED TV Repair">
-    <img src="images/repair3.jpg" alt="Smart TV Service">
-    <img src="images/repair4.webp" alt="Panel Repair">
-    <img src="images/repair5.webp" alt="TV Motherboard Repair">
-    <img src="images/repair6.webp" alt="Repair Machines">
-    <img src="images/repair7.webp" alt="Workshop Image">
-  </div>
+<div class="section-title"><h3>Our Work Gallery</h3><p>Real repair work by our technicians</p></div>
+<div class="gallery">
+<img src="images/repair1.jpg">
+<img src="images/repair2.jpg">
+<img src="images/repair3.jpg">
+<img src="images/repair4.jpg">
+<img src="images/repair5.jpg">
+<img src="images/repair6.jpg">
+<img src="images/repair7.jpg">
+</div>
 </section>
 
 <section>
-  <div class="title"><h2>Customer Reviews</h2></div>
-  <div class="reviews">
-    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>Excellent service & honest pricing.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>My Smart TV looks brand new.</div>
-    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>Very professional technicians.</div>
-  </div>
-</section>
-
-<section>
-  <div class="title"><h2>Our Location</h2></div>
-  <iframe src="https://www.google.com/maps?q=Delhi&output=embed"></iframe>
+<div class="section-title"><h3>Customer Reviews</h3></div>
+<div class="reviews">
+<div class="review">⭐️⭐️⭐️⭐️⭐️<br>Very professional service, quick repair.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️<br>Technician was polite and skilled.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️<br>Urban Company level experience.</div>
+</div>
 </section>
 
 <footer>
-  <p>📍 Address: Your Shop Address Here</p>
-  <p>© 2026 Ultra Pro TV Repair Service</p>
+<p>📍 Your Shop Address Here</p>
+<p>© 2026 Urban TV Repair Service</p>
 </footer>
 
-<a class="floating" href="https://wa.me/9178350 81028">💬 WhatsApp</a>
+<a href="https://wa.me/919318473819" class="float-whatsapp">WhatsApp</a>
 
 <script>
 function sendWhatsApp(){
-  var n=document.getElementById('name').value;
-  var p=document.getElementById('phone').value;
-  var pr=document.getElementById('problem').value;
-  var msg=`New Repair Appointment%0AName: ${n}%0APhone: ${p}%0AProblem: ${pr}`;
-  window.open(`https://wa.me/9178350 81028?text=${msg}`,'_blank');
+var n=document.getElementById('name').value;
+var p=document.getElementById('phone').value;
+var pr=document.getElementById('problem').value;
+var msg=`TV Repair Booking%0AName: ${n}%0APhone: ${p}%0AIssue: ${pr}`;
+window.open(`https://wa.me/919318473819?text=${msg}`,'_blank');
 }
 </script>
 
